@@ -111,13 +111,11 @@ impl Header for Accept {
     {
         let value = values.next().ok_or_else(headers_core::Error::invalid)?;
         let value_str = value.to_str().map_err(|_| headers_core::Error::invalid())?;
-        value_str
-            .parse()
-            .map_err(|_| headers_core::Error::invalid())
+        Accept::parse_body(value_str).map_err(|_| headers_core::Error::invalid())
     }
 
     fn encode<E: Extend<HeaderValue>>(&self, values: &mut E) {
-        let header_value = HeaderValue::from_str(&self.to_string())
+        let header_value = HeaderValue::from_str(&self.body_to_string())
             .expect("header canonical form includes only visible ascii chars");
         values.extend(::std::iter::once(header_value));
     }
