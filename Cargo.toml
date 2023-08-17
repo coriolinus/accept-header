@@ -1,0 +1,14 @@
+[package]
+name = "accept-header"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bstr = "1.6.0"
+headers-core = "0.2.0"
+mime = "0.3.17"
+noisy_float = "0.2.0"
+thiserror = "1.0.47"
+
+[dev-dependencies]
+itertools = "0.11.0"
