@@ -14,7 +14,7 @@ pub type Quality = R32;
 /// This header lets the client specify what sort of content it wants to receive.
 ///
 /// See [its specification in RFC9110](https://www.rfc-editor.org/rfc/rfc9110#name-accept).
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct Accept {
     /// This is always stored in descending order of quality.
     media_types: Vec<MediaType>,

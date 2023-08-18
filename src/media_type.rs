@@ -5,7 +5,7 @@ use mime::{Mime, Name};
 use crate::Quality;
 
 /// A Media Type combines a media range (including parameters) with a quality weight.
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct MediaType {
     pub mime: Mime,
     pub quality: Option<Quality>,
