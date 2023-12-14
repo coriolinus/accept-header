@@ -21,7 +21,7 @@ pub struct Accept {
 }
 
 impl Accept {
-    pub const HEADER_NAME: &str = "accept";
+    pub const HEADER_NAME: &'static str = "accept";
 
     /// Parse the complete header, including the header name.
     ///
@@ -228,7 +228,9 @@ mod tests {
     fn empty() {
         let input = "Accept:";
         let err = Accept::parse(input).unwrap_err();
-        let ParseError::FailedToParseMediaType { err, .. } = err else {panic!("wrong err variant")};
+        let ParseError::FailedToParseMediaType { err, .. } = err else {
+            panic!("wrong err variant")
+        };
         dbg!(&err, err.to_string());
         let err_str = err.to_string();
         assert!(err_str.contains("a slash"));
