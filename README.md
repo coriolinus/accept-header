@@ -8,13 +8,13 @@ Hopefully in the future this can be deprecated in favor of a canonical implentat
 
 Because there already exists a different project with the same name on <https://crates.io>, this is not (yet) published there. Other methods
 
-## Git Dependency
+### Git Dependency
 
 ```toml
 accept-header = { version = "0.1.0", git = "https://github.com/coriolinus/accept-header.git" }
 ```
 
-## Cloudsmith Package Repository
+### Cloudsmith Package Repository
 
 [![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=for-the-badge)](https://cloudsmith.com)
 
