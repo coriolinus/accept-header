@@ -2,6 +2,10 @@
 name = "accept-header"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/coriolinus/accept-header"
+license = "MIT"
+keywords = ["http", "header"]
+publish = ["finvia-accept-header"]
 
 [dependencies]
 bstr = "1.8.0"
